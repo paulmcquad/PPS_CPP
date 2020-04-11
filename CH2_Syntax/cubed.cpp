@@ -1,13 +1,13 @@
 #include <iostream>
+using namespace std;
 
-int Square(int);
 int Cube(int);
 
 int main()
 {
 
-    std::cout << "The square of 27 is " << Square(27) << std::endl;
-    std::cout << "The cube of 27 is " << Cube(27) << std::endl;
+    cout << "The square of 27 is " << Square(27) << endl;
+    cout << "The cube of 27 is " << Cube(27) << endl;
 
     return 0;
 }
