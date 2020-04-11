@@ -9,67 +9,65 @@
 
 using namespace std;
 
-string blackRow(int n);
-
-string whiteRow(int n);
-
-const string BLACK = "********"; // Define a line of a black square
-const string WHITE = "        "; // Define a line of a white square
+string completeRow(char Type, int n);
 
 int main()
 {
   // Print five white-black
-  whiteRow(5);
+  completeRow('W', 5);
 
   // Print five black-white rows
-  blackRow(5);
+  completeRow('B', 5);
 
   // Print five white-black rows
-  whiteRow(5);
+  completeRow('W', 5);
 
   // Print five black-white rows
-  blackRow(5);
+  completeRow('B', 5);
 
   // Print five white-black rows
-  whiteRow(5);
+  completeRow('W', 5);
 
   // Print five black-white rows
-  blackRow(5);
+  completeRow('B', 5);
 
   // Print five white-black rows
-  whiteRow(5);
+  completeRow('W', 5);
 
   // Print five black-white rows
-  blackRow(5);
+  completeRow('B', 5);
 
   return 0;
 }
 
-string blackRow(int n)
+// Prints (Type: W - White Rows / B - Black Rows) n - many times row
+string completeRow(char Type, int n)
 {
 
-  string blackRow; // A row beginning with a black square
+  string pattern;
 
-  // Create a black-white row by concatenating the basic strings
-  blackRow = BLACK + WHITE + BLACK + WHITE +
-             BLACK + WHITE + BLACK + WHITE;
+  const string BLACK = "********"; // Define a line of a black square
+  const string WHITE = "        "; // Define a line of a white square
 
-  for (int i = 0; i < n; i++)
+  switch (Type)
   {
-    cout << blackRow << endl;
+  case 'W':
+    // Create a white-black row by concatenating the basic strings
+    pattern = WHITE + BLACK + WHITE + BLACK +
+              WHITE + BLACK + WHITE + BLACK;
+    break;
+
+  case 'B':
+    // Create a black-white row by concatenating the basic strings
+    pattern = BLACK + WHITE + BLACK + WHITE +
+              BLACK + WHITE + BLACK + WHITE;
+
+  default:
+    break;
   }
-}
-
-string whiteRow(int n)
-{
-  string whiteRow; // A row beginning with a white square
-
-  // Create a white-black row by concatenating the basic strings
-  whiteRow = WHITE + BLACK + WHITE + BLACK +
-             WHITE + BLACK + WHITE + BLACK;
 
   for (int i = 0; i < n; i++)
   {
-    cout << whiteRow << endl;
+    cout << pattern << endl;
   }
 }
