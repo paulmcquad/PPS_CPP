@@ -1,0 +1,24 @@
+Statistics for grades in file Statistics.dat
+Average: 74.550003
+Minimum grade: 0.000000
+Maximum grade: 100.000000
+4 students had grades below the average. 
+6 students had grades above the average.
+
+The following student(s) had the maximum score: 
+ Mary Jones
+ Martha Jones
+
+Students who scored above the average:
+ Jim Jones
+ Susy Sunshine
+ Alex Dale
+ Chris Dale
+ Mary Jones
+ Martha Jones
+
+Students who scored below the average: 
+ Bill Bly
+ Mary Moonlight
+ Anne Margaret
+ Claire Clear
